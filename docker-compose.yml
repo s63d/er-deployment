@@ -11,7 +11,7 @@ services:
       - account-data:/var/lib/mysql
 
   account-service:
-    image: com.s63d/er-account-service:1.0.0-3-g85fa8f7
+    image: com.s63d/er-account-service:1.0-8-g375bf03
     environment: 
       SPRING_PROFILES_ACTIVE: docker-compose
     ports: 
@@ -27,7 +27,7 @@ services:
       volumes: 
         - vehicle-data:/var/lib/mysql
   vehicle-service:
-    image: com.s63d/er-vehicle-service:1.0.0-20-g0731515
+    image: com.s63d/er-vehicle-service:1.0.0-25-g2998262
     environment: 
       SPRING_PROFILES_ACTIVE: docker-compose
     ports: 
