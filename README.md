@@ -1,6 +1,6 @@
 # ER-Deployment
 ## Building images
-To run the docker-compose, you will need to build the images first.
+To run the docker-compose, you will need to **build the images first**
 
 ### Build all the services
 Linux/MacOS
@@ -15,12 +15,12 @@ Windows
 
 
 ### Build individual service
-- Account service
+Account service
 ```
 $ cd account-service && ./gradlew build docker dockerTag -x test && cd ..
 ```
 
-- Vehicle service
+Vehicle service
 ```
 $ cd vehicle-service && ./gradlew build docker dockerTag -x test && cd ..
 ```
