@@ -27,5 +27,6 @@ $ docker-compose up -d
 ```
 
 This will expose the following ports on the host machine
-- 8081 for the  `account service`
 - 8080 for the  `vehicle service`
+- 8081 for the  `account service`
+- 8083 for the `trip service`
