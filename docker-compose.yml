@@ -32,7 +32,23 @@ services:
       SPRING_PROFILES_ACTIVE: docker-compose
     ports: 
       - 8080:8080
+
+
+  trip-db:
+      image: mysql
+      restart: always
+      environment:
+        MYSQL_ROOT_PASSWORD: accounts
+        MYSQL_DATABASE: trip-db
+      volumes: 
+        - trip-data:/var/lib/mysql
+  trip-service:
+    image: com.s63d/er-trip-service:latest
+    environment: 
+      SPRING_PROFILES_ACTIVE: docker-compose
+    ports: 
+      - 8082:8080
 volumes:
   account-data:
   vehicle-data:
-    
+  trip-data:
