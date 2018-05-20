@@ -1,0 +1,6 @@
+[submodule "account-service"]
+	path = account-service
+	url = git@github.com:s63d/er-account-service.git
+[submodule "vehicle-service"]
+	path = vehicle-service
+	url = git@github.com:s63d/er-vehicle-service.git
