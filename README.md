@@ -4,12 +4,12 @@ To run the docker-compose, you will need to build the images first.
 
 - Account service
 ```
-$ cd account-service && ./gradlew build docker dockerTag && cd ..
+$ cd account-service && ./gradlew build docker dockerTag -x test && cd ..
 ```
 
 - Vehicle service
 ```
-$ cd vehicle-service && ./gradlew build docker dockerTag && cd ..
+$ cd vehicle-service && ./gradlew build docker dockerTag -x test && cd ..
 ```
 
 ## Run project
