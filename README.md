@@ -2,6 +2,19 @@
 ## Building images
 To run the docker-compose, you will need to build the images first.
 
+### Build all the services
+Linux/MacOS
+```
+$ git submodule foreach "./gradlew build docker dockerTag -x test" 
+```
+
+Windows
+```
+> git submodule foreach "gradlew build docker dockerTag -x test" 
+```
+
+
+### Build individual service
 - Account service
 ```
 $ cd account-service && ./gradlew build docker dockerTag -x test && cd ..
