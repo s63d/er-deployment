@@ -110,23 +110,28 @@
 				{
 					"name": "Suspend vehicle",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "1"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{vehicle-service}}/api/vehicles/4e40d2ad694070612392676275598054/suspend",
+							"raw": "{{vehicle-service}}/api/vehicles/x-y-z/suspend",
 							"host": [
 								"{{vehicle-service}}"
 							],
 							"path": [
 								"api",
 								"vehicles",
-								"4e40d2ad694070612392676275598054",
+								"x-y-z",
 								"suspend"
 							]
 						}
@@ -161,13 +166,18 @@
 				{
 					"name": "get vehicle from user 2",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "1"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "{{vehicle-service}}/api/vehicles?user=2",
@@ -191,13 +201,18 @@
 				{
 					"name": "Create vehicle account 2 (GOLF)",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-2}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "2"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -249,13 +264,18 @@
 				{
 					"name": "get vehicle from id 1",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "GET",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "1"
-							}
-						],
+						"header": [],
 						"body": {},
 						"url": {
 							"raw": "{{vehicle-service}}/api/vehicles",
@@ -273,13 +293,18 @@
 				{
 					"name": "Create vehicle",
 					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
 						"method": "POST",
-						"header": [
-							{
-								"key": "Authorization",
-								"value": "1"
-							}
-						],
+						"header": [],
 						"body": {
 							"mode": "formdata",
 							"formdata": [
@@ -449,7 +474,7 @@
 							"formdata": [
 								{
 									"key": "email",
-									"value": "marvin.zwolsman@gmail.com",
+									"value": "goosje@hotmail.com",
 									"description": "",
 									"type": "text"
 								},
@@ -517,6 +542,107 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Create user 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "firstname",
+							"value": "Marvin",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "lastname",
+							"value": "Zwolsman",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "marvin.zwolsman@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Eindhoven",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "postal",
+							"value": "5616 SP",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "Ekkerstraat 28",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Wachtwoord2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{account-service}}/api/users",
+					"host": [
+						"{{account-service}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login user 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "marvin.zwolsman@gmail.com",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "Wachtwoord2",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{account-service}}/api/users/login",
+					"host": [
+						"{{account-service}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
 		}
 	]
 }

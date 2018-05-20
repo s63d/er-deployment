@@ -1,10 +1,15 @@
 # ER-Deployment
 
-## Pull the submodules
+## Init the submodules
 To build the images, you have to pull the submodules first
 
 ```
 $ git submodule update --init --recursive
+```
+
+### Updating the submodules to the latest version
+```
+$ git submodule foreach git pull origin master
 ```
 
 ## Building images
