@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  account-db:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: accounts
+      MYSQL_DATABASE: account-db
+    volumes: 
+      - account-data:/var/lib/mysql
+
+  account-service:
+    image: com.s63d/er-account-service:1.0.3
+    environment: 
+      SPRING_PROFILES_ACTIVE: docker-compose
+    ports: 
+      - 8081:8080
+
+volumes:
+  account-data:
+    
