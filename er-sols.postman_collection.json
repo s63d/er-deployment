@@ -1,0 +1,522 @@
+{
+	"info": {
+		"_postman_id": "3773d33e-8e17-4dd6-8534-4d55bc54b10b",
+		"name": "er-sols",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Vehicle Service",
+			"description": "",
+			"item": [
+				{
+					"name": "Create new car tracker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/trackers",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"trackers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all the trackers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/trackers",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"trackers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Assign car tracker",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "carId",
+									"value": "x-y-z",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "trackerId",
+									"value": "8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{vehicle-service}}/api/trackers",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"trackers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get car tracker by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/trackers/8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"trackers",
+								"8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suspend vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles/4e40d2ad694070612392676275598054/suspend",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"4e40d2ad694070612392676275598054",
+								"suspend"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get current vehicles",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles/current",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"current"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle from user 2",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles?user=2",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles"
+							],
+							"query": [
+								{
+									"key": "user",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create vehicle account 2 (GOLF)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "2"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "license",
+									"value": "a-b-c",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "Golf",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Volkswagen",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "1200",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "Blauw",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get vehicle from id 1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1"
+							}
+						],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create vehicle",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "1"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "license",
+									"value": "x-y-z",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "type",
+									"value": "147",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "brand",
+									"value": "Alfa Romeo",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "weight",
+									"value": "1000",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "color",
+									"value": "zwart",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Account Service",
+			"description": "",
+			"item": [
+				{
+					"name": "Create role",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "basic",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "basic user",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/roles",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"roles"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "Goos",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "van den Bekerom",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "goosje@hotmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Eindhoven",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "postal",
+									"value": "5616 SP",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Ekkerstraat 28",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wachtwoord2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/users",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marvin.zwolsman@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wachtwoord2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/users/login",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get user 1",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "old",
+									"value": "Wachtwoord2",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "new",
+									"value": "Wachtwoord",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/users/1",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
