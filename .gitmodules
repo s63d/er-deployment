@@ -4,3 +4,6 @@
 [submodule "vehicle-service"]
 	path = vehicle-service
 	url = https://github.com/s63d/er-vehicle-service.git
+[submodule "trip-service"]
+	path = trip-service
+	url = https://github.com/s63d/er-trip-service.git
