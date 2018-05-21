@@ -58,6 +58,12 @@ services:
     ports:
       - 5672:5672
       - 15672:15672
+  trip-consumer:
+    image: com.s63d/er-trip-consumer:latest
+    environment: 
+      SPRING_PROFILES_ACTIVE: docker-compose
+    ports: 
+      - 8083:8080
 
 volumes:
   account-data:
