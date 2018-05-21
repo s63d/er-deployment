@@ -7,3 +7,6 @@
 [submodule "trip-service"]
 	path = trip-service
 	url = https://github.com/s63d/er-trip-service.git
+[submodule "trip-consumer"]
+	path = trip-consumer
+	url = https://github.com/s63d/er-trip-consumer.git
