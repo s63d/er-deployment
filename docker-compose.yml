@@ -38,13 +38,16 @@ services:
       - 8080:8080
 
   trip-db:
-      image: mysql
-      restart: always
-      environment:
-        MYSQL_ROOT_PASSWORD: accounts
-        MYSQL_DATABASE: trip-db
-      volumes: 
-        - trip-data:/var/lib/mysql
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: accounts
+      MYSQL_DATABASE: trip-db
+    volumes: 
+      - trip-data:/var/lib/mysql
+    ports:
+      - 3307:3306
+
   trip-service:
     image: com.s63d/er-trip-service:latest
     environment: 
