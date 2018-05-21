@@ -12,8 +12,10 @@ This will expose the following ports on the host machine
 - 8081 for the  `account service`
 - 8082 for the `trip service`
 - 8083 for the `trip consumer`
-
 To see if a service is up and running you can check the `/actuator/health` page
+
+
+
 ## Databases
 This wil also start 3 MySQL servers, they can be accesed by the following connection string
 
@@ -29,6 +31,14 @@ The management console is accesable from http://localhost:15672. There will be a
 | Username | Password |
 | -------- | -------- |
 | guest    | guest    |
+
+## Grafana
+
+Grafana is also exposed to the host system. The service is available through port `3000` and using the following credentials
+
+| Username | Password
+| -------- | --------
+| admin    | admin
 
 ### Logs
 If you want to see logs of the docker-compose you can run the following command
