@@ -62,13 +62,13 @@
 							"urlencoded": [
 								{
 									"key": "carId",
-									"value": "x-y-z",
+									"value": "4e40d2ad694070612392676275598054",
 									"description": "",
 									"type": "text"
 								},
 								{
 									"key": "trackerId",
-									"value": "8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385",
+									"value": "8873028c-3358-42b7-8199-a72901d10e70",
 									"description": "",
 									"type": "text"
 								}
@@ -94,14 +94,14 @@
 						"header": [],
 						"body": {},
 						"url": {
-							"raw": "{{vehicle-service}}/api/trackers/8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385",
+							"raw": "{{vehicle-service}}/api/trackers/bde6bed9-47b0-43a5-9b4e-331832cebef6",
 							"host": [
 								"{{vehicle-service}}"
 							],
 							"path": [
 								"api",
 								"trackers",
-								"8e9dc6f2-a4b0-46c7-9b0c-a179a9ee0385"
+								"bde6bed9-47b0-43a5-9b4e-331832cebef6"
 							]
 						}
 					},
@@ -352,6 +352,66 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Get vehicle by id",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles/4e40d2ad694070612392676275598054",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles",
+								"4e40d2ad694070612392676275598054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get EVERY vehicle",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{user-1}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{vehicle-service}}/api/vehicles",
+							"host": [
+								"{{vehicle-service}}"
+							],
+							"path": [
+								"api",
+								"vehicles"
+							]
+						},
+						"description": "All the vehicles in the DB"
+					},
+					"response": []
 				}
 			]
 		},
@@ -540,109 +600,209 @@
 						}
 					},
 					"response": []
+				},
+				{
+					"name": "Create user 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "firstname",
+									"value": "Marvin",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "lastname",
+									"value": "Zwolsman",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "marvin.zwolsman@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "city",
+									"value": "Eindhoven",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "postal",
+									"value": "5616 SP",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "address",
+									"value": "Ekkerstraat 28",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wachtwoord2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/users",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login user 2",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "email",
+									"value": "marvin.zwolsman@gmail.com",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "Wachtwoord2",
+									"description": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{account-service}}/api/users/login",
+							"host": [
+								"{{account-service}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
 				}
 			]
 		},
 		{
-			"name": "Create user 2",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "firstname",
-							"value": "Marvin",
-							"description": "",
-							"type": "text"
+			"name": "Trip service",
+			"description": "",
+			"item": [
+				{
+					"name": "Create trip with cartracker",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "carTrackerId",
+									"value": "8873028c-3358-42b7-8199-a72901d10e70",
+									"description": "",
+									"type": "text"
+								}
+							]
 						},
-						{
-							"key": "lastname",
-							"value": "Zwolsman",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "email",
-							"value": "marvin.zwolsman@gmail.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "city",
-							"value": "Eindhoven",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "postal",
-							"value": "5616 SP",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "address",
-							"value": "Ekkerstraat 28",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "Wachtwoord2",
-							"description": "",
-							"type": "text"
+						"url": {
+							"raw": "{{trip-service}}/api/trips",
+							"host": [
+								"{{trip-service}}"
+							],
+							"path": [
+								"api",
+								"trips"
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{account-service}}/api/users",
-					"host": [
-						"{{account-service}}"
-					],
-					"path": [
-						"api",
-						"users"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Login user 2",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "email",
-							"value": "marvin.zwolsman@gmail.com",
-							"description": "",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "Wachtwoord2",
-							"description": "",
-							"type": "text"
+				{
+					"name": "Trip by tracker id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{trip-service}}/api/trips?trackerId=8873028c-3358-42b7-8199-a72901d10e70",
+							"host": [
+								"{{trip-service}}"
+							],
+							"path": [
+								"api",
+								"trips"
+							],
+							"query": [
+								{
+									"key": "trackerId",
+									"value": "8873028c-3358-42b7-8199-a72901d10e70"
+								}
+							]
 						}
-					]
+					},
+					"response": []
 				},
-				"url": {
-					"raw": "{{account-service}}/api/users/login",
-					"host": [
-						"{{account-service}}"
-					],
-					"path": [
-						"api",
-						"users",
-						"login"
-					]
+				{
+					"name": "Get trip by car id/license",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{trip-service}}/api/trips/4e40d2ad694070612392676275598054",
+							"host": [
+								"{{trip-service}}"
+							],
+							"path": [
+								"api",
+								"trips",
+								"4e40d2ad694070612392676275598054"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get trip by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "{{trip-service}}/api/trips/2",
+							"host": [
+								"{{trip-service}}"
+							],
+							"path": [
+								"api",
+								"trips",
+								"2"
+							]
+						}
+					},
+					"response": []
 				}
-			},
-			"response": []
+			]
 		}
 	]
 }
