@@ -72,11 +72,18 @@ services:
     image: prom/prometheus
     volumes:
       - ./prometheus.yml:/etc/prometheus/prometheus.yml
+      - prometheus-data:/prometheus
   grafana:
     image: grafana/grafana
+    volumes: 
+      - grafana-data:/var/lib/grafana
+      - ./dashboards:/var/lib/grafana/dashboards
+      - ./provisioning:/etc/grafana/provisioning/
     ports:
       - 3000:3000
 volumes:
   account-data:
   vehicle-data:
   trip-data:
+  prometheus-data:
+  grafana-data:
