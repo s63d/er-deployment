@@ -4,7 +4,7 @@
 If it is your first time running this deployment repository, run this in your terminal
 ```
 $ git submodule update --init
-``
+```
 
 Simply run the following command in the terminal (Bash/Powershell)
 ```
