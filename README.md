@@ -58,10 +58,10 @@ If you are only interested in the logs of a specific service you can run
 $ docker-compose logs -f <service>
 ```
 
-### Developing / Debugging locally
+## Developing / Debugging locally
 To work on a service locally and be able to debug it, clone the respective repository and open it in your prefered IDE.
 
-First stop the deployed service in the docker network (<service-name> is the name of the service in the `docker-compose.yml` file
+First stop the deployed service in the docker network (`<service-name>` is the name of the service in the `docker-compose.yml` file)
 ```
 $ docker-compose stop <service-name>
 ```
