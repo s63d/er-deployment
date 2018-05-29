@@ -67,11 +67,7 @@ $ docker-compose stop <service-name>
 ```
 After that make sure you've got mysql running on the host machine that exposes 3306 with a database called `er-sols`, this is because the services run under a different profile when they're not in the docker network. If you do not have MySQL running you could achieve so with the following command. (root password MUST be 'password')
 ```
-docker run -p 3306:3306 -e MYSQL_ROOT_PASSWORD=password mysql
+docker run --name er-mysql -e MYSQL_ROOT_PASSWORD=password -e MYSQL_DATABASE=er-sols -d -p 3306:3306 mysql:5.7.22
 ```
 
-Now just connect to this mysql server in your prefered way and
-```
-create database `er-sols`;
-```
 Run/Debug the service and you're good to go.
