@@ -10,3 +10,6 @@
 [submodule "trip-consumer"]
 	path = trip-consumer
 	url = https://github.com/s63d/er-trip-consumer.git
+[submodule "invoice-service"]
+	path = invoice-service
+	url = https://github.com/s63d/er-invoice-service.git
