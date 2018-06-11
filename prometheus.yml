@@ -30,3 +30,7 @@ scrape_configs:
     metrics_path: /actuator/prometheus
     static_configs:
       - targets: ['trip-consumer:8080']
+  - job_name: invoice-service
+    metrics_path: /actuator/prometheus
+    static_configs:
+      - targets: ['invoice-service:8080']
