@@ -13,6 +13,3 @@
 [submodule "invoice-service"]
 	path = invoice-service
 	url = https://github.com/s63d/er-invoice-service.git
-[submodule "swagger-combine"]
-	path = swagger-combine
-	url = https://github.com/s63d/swagger-combine
