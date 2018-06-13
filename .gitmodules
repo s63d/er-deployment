@@ -16,3 +16,6 @@
 [submodule "swagger-combine"]
 	path = swagger-combine
 	url = https://github.com/s63d/swagger-combine
+[submodule "er-frontend"]
+	path = er-frontend
+	url = https://github.com/s63d/er-frontend
