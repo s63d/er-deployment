@@ -19,3 +19,6 @@
 [submodule "er-frontend"]
 	path = er-frontend
 	url = https://github.com/s63d/er-frontend
+[submodule "trip-middleware"]
+	path = trip-middleware
+	url = https://github.com/s63d/er-trip-middleware.git
