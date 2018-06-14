@@ -100,7 +100,12 @@ services:
       SPRING_PROFILES_ACTIVE: docker-compose
     ports: 
       - 8083:8080
-
+  trip-middleware:
+    image: com.s63d/trip-middleware:latest
+    environment: 
+      SPRING_PROFILES_ACTIVE: docker-compose
+    ports: 
+      - 8086:8080
   prometheus:
     image: prom/prometheus
     volumes:
