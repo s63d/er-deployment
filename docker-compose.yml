@@ -21,6 +21,12 @@ services:
       - trip-service
       - invoice-service
 
+  front-end:
+    build: ./er-frontend/
+    image: s63d/front-end-nginx
+    ports:
+      - 82:80
+
   account-db:
     image: mysql
     restart: always
@@ -117,6 +123,7 @@ services:
       - 3000:3000
 
 volumes:
+  front-end-data:
   account-data:
   vehicle-data:
   trip-data:
